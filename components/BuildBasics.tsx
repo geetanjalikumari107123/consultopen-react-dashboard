@@ -7,18 +7,9 @@ import LockedItems from "./LockedItem";
 import MindGym from "./MindGym";
 import Card from "./ui/Card";
 import SectionHeader from "./ui/SectionHeader";
-
 import { roadmapTasks } from "@/data/mockData";
+import type { RoadmapTask } from "@/types/roadmap";
 import { isTaskLocked } from "@/utils/roadMapHelper";
-
-interface RoadmapTask {
-  id: number;
-  title: string;
-  tag: string;
-  tagColor: string;
-  started: boolean;
-  completed: boolean;
-}
 
 export default function BuildBasics() {
   const [tasks, setTasks] = useState<RoadmapTask[]>(roadmapTasks);
