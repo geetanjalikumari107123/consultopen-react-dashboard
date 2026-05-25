@@ -47,20 +47,12 @@ export default function AIChatbox() {
   return (
     <Card className="p-4 min-h-125 bg-pink-50 flex flex-col">
       <Image
-<<<<<<< HEAD
-  src="/images/ai-logo.svg"
-  alt="AI Logo"
-  width={50}
-  className="object-contain"
-/>
-=======
         src="/images/ai-logo.svg"
         alt="AI Logo"
         width={200}
-        height={80}
+        height={0}
         className="object-contain"
       />
->>>>>>> 0a6981c (Update project)
 
       <div className="flex-1 overflow-y-auto my-6 space-y-3">
         {message.map((msg) => (
