@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ArrowUpRight, Send } from "lucide-react";
 import Card from "./ui/Card";
 import Button from "./ui/Button";
+import Image from "next/image";
 
 type ChatMessage = {
   id: number;
@@ -45,11 +46,12 @@ export default function AIChatbox() {
 
   return (
     <Card className="p-4 min-h-125 bg-pink-50 flex flex-col">
-      <img
-        src="/images/ai-logo.svg"
-        alt="AI Logo"
-        className="w-50 object-contain"
-      />
+      <Image
+  src="/images/ai-logo.svg"
+  alt="AI Logo"
+  width={50}
+  className="object-contain"
+/>
 
       <div className="flex-1 overflow-y-auto my-6 space-y-3">
         {message.map((msg) => (
