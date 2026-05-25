@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 import {
   LayoutDashboard,
   Map,
@@ -46,9 +47,11 @@ export default function Sidebar() {
   return (
     <div className="w-64 h-screen bg-white flex flex-col border-r border-gray-200">
       <div className="h-16 flex items-center justify-center border-b border-gray-200">
-        <img
+        <Image
           src="/images/logo.png"
           alt="ConsulTOpen logo"
+          width={120}
+          height={32}
           className="h-8 w-auto object-contain"
         />
       </div>
@@ -84,10 +87,12 @@ export default function Sidebar() {
         </nav>
 
         <div className="flex items-center gap-3 p-2 bg-gray-100 rounded-lg">
-          <img
+          <Image
             src="/images/student-avatar.png"
             alt="Alex Miller"
-            className="rounded-full h-10 w-10 object-cover"
+            width={40}
+            height={40}
+            className="rounded-full object-cover"
           />
 
           <div className="flex flex-col">

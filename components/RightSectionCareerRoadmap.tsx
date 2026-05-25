@@ -8,6 +8,7 @@ import {
 import Card from "./ui/Card";
 import BookButton from "./ui/BookButton";
 import ExpertCard from "./ui/ExpertCard";
+import Image from "next/image";
 import SectionHeader from "./ui/SectionHeader";
 import { RightSectionCareerRoadmapProps } from "@/types/roadmap";
 export default function RightSectionCareerRoadmap({
@@ -16,13 +17,12 @@ export default function RightSectionCareerRoadmap({
   tasks,
 }: RightSectionCareerRoadmapProps) {
   const percentage: number = progress;
-const size: number = 96;
-const stroke: number = 8;
+  const size: number = 96;
+  const stroke: number = 8;
 
-const radius: number = (size - stroke) / 2;
-const circumference: number = 2 * Math.PI * radius;
-const offset: number =
-  circumference - (percentage / 100) * circumference;
+  const radius: number = (size - stroke) / 2;
+  const circumference: number = 2 * Math.PI * radius;
+  const offset: number = circumference - (percentage / 100) * circumference;
 
   return (
     <div className="space-y-6">
@@ -130,7 +130,12 @@ const offset: number =
         <div className="space-y-3">
           <div className="flex items-center gap-3 border border-gray-100 rounded-lg p-2">
             <div className="w-8 h-8 bg-red-100 rounded flex items-center justify-center">
-              <img src="/images/youtube.svg" alt="youtube-icon" />
+              <Image
+                src="/images/youtube.svg"
+                alt="YouTube icon"
+                width={24}
+                height={24}
+              />
             </div>
             <div className="flex-1">
               <p className="text-sm text-gray-800">
@@ -143,7 +148,12 @@ const offset: number =
 
           <div className="flex items-center gap-3 border border-gray-100 rounded-lg p-2">
             <div className="w-8 h-8 bg-red-50 rounded flex items-center justify-center">
-              <img src="/images/pdf.svg" alt="PDF Icon" />
+              <Image
+                src="/images/pdf.svg"
+                alt="PDF Icon"
+                width={24}
+                height={24}
+              />
             </div>
             <div className="flex-1">
               <p className="text-sm text-gray-800">Motion & Energy PDF</p>

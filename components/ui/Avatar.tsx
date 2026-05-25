@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import Image from "next/image";
 type AvatarSize = "sm" | "md" | "lg" | "xl";
 
 interface AvatarProps {
@@ -46,16 +46,18 @@ export default function Avatar({
   }
 
   return (
-    <img
-      src={src}
+    <Image
+      src={error ? "/images/default-avatar.png" : src}
       alt={alt}
+      width={48}
+      height={48}
       onError={() => setError(true)}
       className={`
-        rounded-full
-        object-cover
-        ${sizes[size]}
-        ${className}
-      `}
+    rounded-full
+    object-cover
+    ${sizes[size]}
+    ${className}
+  `}
     />
   );
 }
